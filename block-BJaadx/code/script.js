@@ -14,20 +14,21 @@ document.body.children[5].children[0].innertext = `all about document`;
 
 //    - Select the input element with name `email`
 
-document.body.children[6].children[2];
+let email = document.body.children[6].children[2];
 
 // 3. Log the number (using console.log) of children of all the `li` element inside the ul with class `topics`
 
-let li = document.body.children[5];
-console.log(li.children.length);
+let ul = document.body.children[5];
+console.log(`the length of li element is ${ul.children.length}`);
 
 // 4. Select the first input using the `type` selector and store them in variable named `emailInput`
 
-let emailInput = document.getElementById("email");
-
+let emailInput = document.querySelector("email");
+console.log(emailInput);
 // 5. Select the ul element using class selector and store in `topics`
 
 let topics = document.querySelector(".topics");
+console.log(topics);
 
 // 6. Select the first label element and store in `label`
 
@@ -35,11 +36,13 @@ let label = document.querySelector("label");
 
 // 7. Select the input of type `checkbox` with the `id` selector and store in `inputCheckbox`
 
-let inputCheckbox = document.getElementById("remember");
+let inputCheckbox = document.querySelector("remember");
+console.log(inputCheckbox);
 
 // 8. Select the input of type password using Attribute selectors. (eg: input[type="text"]) and store in `password`
 
 let password = document.querySelector('input[type="password"]');
+console.log(password);
 
 // 9. Select the input using the placeholder attribute selector with value `password` and store in `attrPassword`
 
@@ -85,12 +88,15 @@ let labels = document.querySelectorAll("label");
 console.log(labels.length);
 
 // 19. Select all the elements with `id` of `test`
+allTestElem = document.querySelectorAll("#test");
+console.log(allTestElem);
 
 // 20. Select the first element with id `test` using `getElementById`
 
 let firstElement = document.getElementById("test");
 
 // 21. Select the parent element of the element stored in `topics` variable (#5) and log the element.
+console.log(topics.parentElement);
 
 // 22. Select the next element sibling of the element stored in `topics` variable (#5) and log the element.
 
@@ -114,4 +120,5 @@ console.log(typeof topics.lastElementChild.innerText);
 var fieldsetElm = document.querySelector("fieldset");
 
 // 27. Select the parent element of the element stored in `fieldsetElm` variable (#5) and log the `typeof` the element.
-console.log(fieldsetElm.parentElement);
+
+console.log(typeof fieldsetElm.parentElement);
