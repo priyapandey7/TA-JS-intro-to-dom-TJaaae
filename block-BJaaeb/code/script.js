@@ -45,6 +45,7 @@ function createList(arr) {
   // });
   // ul.innerHTML = arr.join("");
   // return ul;
+  //join ("") it means map will return  array and we want string.so we use join
 
   arr.forEach((element) => {
     let li = document.createElement("li");
@@ -73,6 +74,18 @@ createList(["Afghanistan", "Antarctica", "Congo", "Estonia"]);
 
 // Your code goes here
 
+function createTodoList(data = []) {
+  let html = `<ul>${data
+    .map(
+      (elm) => `<li>
+  <p>${elm.name}</p>
+  <input type="checkbox"${elm.isDone ? "checked" : ""}name=""  id=""> 
+  <span>X</span>
+  </li>`
+    )
+    .join("")}</ul>`;
+  return html;
+}
 // TEST
 
 createTodoList([
