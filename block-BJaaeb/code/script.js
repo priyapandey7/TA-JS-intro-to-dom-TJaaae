@@ -63,14 +63,14 @@ createList(["Afghanistan", "Antarctica", "Congo", "Estonia"]);
 // 4. Create a function named `createTodoList` that accept and array of data like [{name: "Learn DOM", isDone: false}, {name: "Learn JS", isDone: true}] and returns
 // the html for single todo will look like given below
 /* 
-<ul>
-  <li>
-    <p>Learn DOM</p>
-    <input type="checkbox" checked name="" id="">
-    <span>X</span>
-  </li>
-</ul>
-*/
+  <ul>
+    <li>
+      <p>Learn DOM</p>
+      <input type="checkbox" checked name="" id="">
+      <span>X</span>
+    </li>
+  </ul>
+  */
 
 // Your code goes here
 
@@ -78,10 +78,10 @@ function createTodoList(data = []) {
   let html = `<ul>${data
     .map(
       (elm) => `<li>
-  <p>${elm.name}</p>
-  <input type="checkbox"${elm.isDone ? "checked" : ""}name=""  id=""> 
-  <span>X</span>
-  </li>`
+    <p>${elm.name}</p>
+    <input type="checkbox"${elm.isDone ? "checked" : ""}name=""  id=""> 
+    <span>X</span>
+    </li>`
     )
     .join("")}</ul>`;
   return html;
